@@ -11,4 +11,9 @@ public class ReviewController {
     public String getMessage(){
         return "Hello World";
     }
+
+    @GetMapping(value = "/message/{name}")
+    public String anotherMessage(@PathVariable("name") String name){
+        return "Hello " + name;
+    }
 }
